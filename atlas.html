@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Atlas">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0e1720">
+<title>Atlas · Naciones y Ciudades</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1720;
+  --surface:#16212b;
+  --surface-2:#1c2a36;
+  --border:#2a3a47;
+  --text:#ece7d9;
+  --text-dim:#8a9ba3;
+  --gold:#c9a24c;
+  --gold-dim:#8a7038;
+  --teal:#4f9c8c;
+  --red:#b5524a;
+  --tabbar-h:62px;
+  --radius:14px;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{height:100%; margin:0;}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:'Inter',system-ui,sans-serif;
+  display:flex; flex-direction:column;
+  overflow:hidden;
+  position:fixed; inset:0;
+}
+h1,h2{font-family:'Spectral',serif; font-weight:600; letter-spacing:.2px; margin:0;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+
+/* ---------- header ---------- */
+.app-header{
+  flex:0 0 auto;
+  padding:max(14px, env(safe-area-inset-top)) 18px 12px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg, var(--surface), var(--bg));
+}
+.brand{display:flex; align-items:baseline; gap:9px;}
+.brand-mark{color:var(--gold); font-size:18px;}
+.brand-text{font-family:'Spectral',serif; font-weight:700; font-size:19px; letter-spacing:1.5px;}
+.brand-sub{display:block; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-dim); margin-top:2px;}
+.header-actions{display:flex; gap:6px;}
+.icon-btn{
+  width:36px; height:36px; border-radius:10px; border:1px solid var(--border);
+  background:var(--surface-2); color:var(--text-dim);
+  display:flex; align-items:center; justify-content:center;
+}
+.icon-btn:active{background:var(--border); color:var(--text);}
+.icon-btn svg{width:18px; height:18px;}
+
+/* ---------- main / panels ---------- */
+main{flex:1 1 auto; position:relative; overflow:hidden;}
+.panel{
+  position:absolute; inset:0; display:none; flex-direction:column;
+  overflow-y:auto; -webkit-overflow-scrolling:touch;
+  padding:16px 16px 28px;
+}
+.panel.active{display:flex;}
+#panel-map.active{display:flex;}
+#panel-map{padding:0;}
+.panel-head{
+  display:flex; align-items:baseline; justify-content:space-between;
+  padding:2px 2px 14px; border-bottom:1px solid var(--border); margin-bottom:14px;
+}
+.panel-head h1{font-size:23px;}
+.count{font-family:'IBM Plex Mono',monospace; color:var(--gold); font-size:13px; border:1px solid var(--gold-dim); border-radius:20px; padding:3px 10px;}
+
+/* ---------- rows / list ---------- */
+.list{display:flex; flex-direction:column; gap:10px;}
+.row{
+  display:flex; align-items:flex-start; gap:12px;
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:13px 12px;
+}
+.row:active{background:var(--surface-2);}
+.row-dot{width:13px; height:13px; border-radius:50%; margin-top:4px; flex:0 0 auto; box-shadow:0 0 0 3px rgba(255,255,255,0.04);}
+.row-main{flex:1 1 auto; min-width:0;}
+.row-title{font-weight:600; font-size:15.5px;}
+.row-sub{font-size:12.5px; color:var(--text-dim); margin-top:2px;}
+.row-meters{display:flex; gap:16px; margin-top:9px;}
+.mini-meter{display:flex; align-items:center; gap:7px;}
+.mini-meter .mono{font-size:11px; color:var(--text-dim); width:16px;}
+.meter{display:flex; gap:2.5px;}
+.meter span{width:6px; height:9px; border-radius:1.5px; background:var(--border);}
+.meter span.filled.teal{background:var(--teal);}
+.meter span.filled.red{background:var(--red);}
+.row-del{
+  flex:0 0 auto; width:28px; height:28px; border-radius:8px; border:none;
+  background:transparent; color:var(--text-dim); font-size:13px; margin-top:2px;
+}
+.row-del:active{background:var(--border); color:var(--red);}
+
+.empty{
+  margin-top:40px; text-align:center; color:var(--text-dim); padding:0 12px;
+}
+.empty h2{color:var(--text); font-size:17px; margin-bottom:8px;}
+.empty p{font-size:13.5px; line-height:1.5; margin:0 0 18px;}
+.empty button{margin:0 auto;}
+
+/* ---------- buttons ---------- */
+.btn-primary,.btn-secondary,.btn-ghost{
+  font-family:'Inter',sans-serif; font-weight:600; font-size:14.5px;
+  border-radius:11px; padding:13px 18px; border:1px solid transparent;
+}
+.btn-primary{background:var(--gold); color:#1a1306;}
+.btn-primary:active{background:var(--gold-dim);}
+.btn-secondary{background:transparent; border-color:var(--border); color:var(--text);}
+.btn-secondary:active{background:var(--surface-2);}
+.btn-ghost{background:transparent; color:var(--red); border:none; padding:13px 8px;}
+
+/* ---------- fab ---------- */
+.fab{
+  position:fixed; right:18px; z-index:30;
+  bottom:calc(var(--tabbar-h) + 16px + env(safe-area-inset-bottom));
+  width:54px; height:54px; border-radius:50%;
+  background:var(--gold); color:#1a1306; border:none;
+  font-size:28px; line-height:54px; text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.45);
+}
+.fab:active{background:var(--gold-dim);}
+
+/* ---------- tab bar ---------- */
+.tabbar{
+  flex:0 0 auto; display:flex;
+  height:calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+  padding-bottom:env(safe-area-inset-bottom);
+  border-top:1px solid var(--border); background:var(--surface);
+}
+.tab{
+  flex:1 1 0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:3px; background:none; border:none; color:var(--text-dim); font-family:'Inter',sans-serif;
+  font-size:11px; letter-spacing:.3px;
+}
+.tab svg{width:21px; height:21px; stroke:var(--text-dim);}
+.tab.active{color:var(--gold);}
+.tab.active svg{stroke:var(--gold);}
+
+/* ---------- map ---------- */
+#map{width:100%; height:100%;}
+.pick-banner{
+  position:absolute; top:14px; left:14px; right:14px; z-index:20;
+  background:var(--surface); border:1px solid var(--gold-dim); border-radius:12px;
+  padding:11px 13px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.45);
+}
+.pick-banner span{font-size:13px; line-height:1.4;}
+.pick-banner button{
+  background:var(--surface-2); border:1px solid var(--border); color:var(--text);
+  border-radius:8px; padding:7px 11px; font-size:12.5px; font-weight:600; flex:0 0 auto;
+}
+.popup strong{font-family:'Spectral',serif; font-size:14px;}
+.popup span{font-size:12px; color:#444;}
+.leaflet-popup-content-wrapper{background:var(--surface); color:var(--text); border-radius:10px;}
+.leaflet-popup-content-wrapper .popup span{color:var(--text-dim);}
+.leaflet-popup-tip{background:var(--surface);}
+
+/* ---------- sheet / forms ---------- */
+.sheet-overlay{
+  position:fixed; inset:0; z-index:40; background:rgba(6,10,14,.6);
+  display:flex; align-items:flex-end; justify-content:center;
+  opacity:0; visibility:hidden; transition:opacity .22s ease;
+}
+.sheet-overlay.open{opacity:1; visibility:visible;}
+.sheet{
+  width:100%; max-width:480px; max-height:88vh; overflow-y:auto;
+  background:var(--surface); border:1px solid var(--border); border-bottom:none;
+  border-radius:20px 20px 0 0; padding:10px 20px calc(20px + env(safe-area-inset-bottom));
+  transform:translateY(100%); transition:transform .28s cubic-bezier(.32,.72,0,1);
+}
+.sheet-overlay.open .sheet{transform:translateY(0);}
+.sheet-handle{width:36px; height:4px; background:var(--border); border-radius:3px; margin:4px auto 14px;}
+.sheet h2{font-size:19px; margin-bottom:16px;}
+.sheet label{display:block; font-size:12.5px; color:var(--text-dim); margin:16px 0 7px; text-transform:uppercase; letter-spacing:.6px;}
+.sheet input[type=text],.sheet input[type=number],.sheet select{
+  width:100%; background:var(--surface-2); border:1px solid var(--border); color:var(--text);
+  border-radius:10px; padding:12px 13px; font-size:15px; font-family:'Inter',sans-serif;
+}
+.sheet input[type=range]{width:100%; accent-color:var(--gold); margin-top:4px;}
+.range-row{display:flex; align-items:center; justify-content:space-between;}
+.range-row .mono{color:var(--gold); font-size:13px;}
+.coord-row{display:flex; gap:10px;}
+.coord-row > div{flex:1 1 0;}
+.coord-row label{margin-top:16px;}
+.pick-link{
+  display:inline-flex; align-items:center; gap:6px; margin-top:10px; background:none; border:none;
+  color:var(--teal); font-size:13px; font-weight:600; padding:4px 0;
+}
+.color-row{display:flex; align-items:center; gap:10px;}
+input[type=color]{
+  -webkit-appearance:none; appearance:none; border:1px solid var(--border); border-radius:9px;
+  width:42px; height:42px; padding:0; background:none; flex:0 0 auto;
+}
+.swatches{display:flex; gap:7px; flex-wrap:wrap;}
+.swatch{width:24px; height:24px; border-radius:50%; border:1px solid rgba(255,255,255,.15);}
+.sheet-actions{display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-top:24px;}
+.sheet-actions .btn-ghost{margin-right:auto;}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="brand-mark">✦</span>
+    <div>
+      <span class="brand-text">ATLAS</span>
+      <span class="brand-sub">Naciones · Ciudades</span>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button class="icon-btn" id="btnExport" title="Exportar datos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="M8 10l4 4 4-4"/><path d="M4 18h16"/></svg>
+    </button>
+    <button class="icon-btn" id="btnImport" title="Importar datos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14V4"/><path d="M8 8l4-4 4 4"/><path d="M4 18h16"/></svg>
+    </button>
+    <input type="file" id="fileImport" accept="application/json" hidden>
+  </div>
+</header>
+
+<main>
+  <section class="panel active" id="panel-nations">
+    <div class="panel-head"><h1>Naciones</h1><span class="count" id="countNations">0</span></div>
+    <div class="list" id="listNations"></div>
+    <div class="empty" id="emptyNations" hidden>
+      <h2>Aún no hay naciones</h2>
+      <p>Crea la primera nación: nombre, color, nivel de desarrollo y poder militar.</p>
+      <button class="btn-primary" onclick="openNationForm(null)">+ Nueva nación</button>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-cities">
+    <div class="panel-head"><h1>Ciudades</h1><span class="count" id="countCities">0</span></div>
+    <div class="list" id="listCities"></div>
+    <div class="empty" id="emptyCities" hidden>
+      <h2>Aún no hay ciudades</h2>
+      <p id="emptyCitiesText">Crea tu primera ciudad y asígnala a una nación.</p>
+      <button class="btn-primary" onclick="openCityForm(null)">+ Nueva ciudad</button>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-map">
+    <div id="map"></div>
+    <div class="pick-banner" id="pickBanner" hidden>
+      <span id="pickBannerText"></span>
+      <button id="btnCancelPick">Cancelar</button>
+    </div>
+  </section>
+</main>
+
+<button class="fab" id="fabAdd">+</button>
+
+<nav class="tabbar">
+  <button class="tab active" data-tab="nations">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"/><path d="M5 4h11l-2.5 3.5L16 11H5"/></svg>
+    Naciones
+  </button>
+  <button class="tab" data-tab="cities">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l6-3v16"/><path d="M10 21V11l6-2v12"/><path d="M16 21V9l4-1v13"/><path d="M2 21h20"/></svg>
+    Ciudades
+  </button>
+  <button class="tab" data-tab="map">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg>
+    Mapa
+  </button>
+</nav>
+
+<!-- ---------- Nation sheet ---------- -->
+<div class="sheet-overlay" id="overlayNation">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <h2 id="nationFormTitle">Nueva nación</h2>
+    <form id="formNation">
+      <label>Nombre</label>
+      <input type="text" id="nationName" maxlength="40" placeholder="p. ej. Reino de Valduria" required>
+
+      <label>Color</label>
+      <div class="color-row">
+        <input type="color" id="nationColor" value="#c9a24c">
+        <div class="swatches" id="nationSwatches"></div>
+      </div>
+
+      <label>
+        <div class="range-row"><span>Nivel de desarrollo</span><span class="mono" id="nationDevVal">5</span></div>
+      </label>
+      <input type="range" min="1" max="10" value="5" id="nationDev">
+      <div class="meter" id="nationDevMeter" style="margin-top:8px;"></div>
+
+      <label>
+        <div class="range-row"><span>Poder militar</span><span class="mono" id="nationMilVal">5</span></div>
+      </label>
+      <input type="range" min="1" max="10" value="5" id="nationMil">
+      <div class="meter" id="nationMilMeter" style="margin-top:8px;"></div>
+
+      <div class="sheet-actions">
+        <button type="button" class="btn-ghost" id="btnDeleteNation" hidden>Eliminar</button>
+        <button type="button" class="btn-secondary" id="btnCancelNation">Cancelar</button>
+        <button type="submit" class="btn-primary">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ---------- City sheet ---------- -->
+<div class="sheet-overlay" id="overlayCity">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <h2 id="cityFormTitle">Nueva ciudad</h2>
+    <form id="formCity">
+      <label>Nombre</label>
+      <input type="text" id="cityName" maxlength="40" placeholder="p. ej. Puerto Argenta" required>
+
+      <label>Nación</label>
+      <select id="cityNation"></select>
+
+      <label>Coordenadas</label>
+      <div class="coord-row">
+        <div><input type="number" id="cityLat" step="0.0001" min="-90" max="90" placeholder="Latitud"></div>
+        <div><input type="number" id="cityLng" step="0.0001" min="-180" max="180" placeholder="Longitud"></div>
+      </div>
+      <button type="button" class="pick-link" id="btnPickOnMap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+        Elegir en el mapa
+      </button>
+
+      <label>
+        <div class="range-row"><span>Nivel de desarrollo</span><span class="mono" id="cityDevVal">5</span></div>
+      </label>
+      <input type="range" min="1" max="10" value="5" id="cityDev">
+      <div class="meter" id="cityDevMeter" style="margin-top:8px;"></div>
+
+      <label>
+        <div class="range-row"><span>Poder militar</span><span class="mono" id="cityMilVal">5</span></div>
+      </label>
+      <input type="range" min="1" max="10" value="5" id="cityMil">
+      <div class="meter" id="cityMilMeter" style="margin-top:8px;"></div>
+
+      <div class="sheet-actions">
+        <button type="button" class="btn-ghost" id="btnDeleteCity" hidden>Eliminar</button>
+        <button type="button" class="btn-secondary" id="btnCancelCity">Cancelar</button>
+        <button type="submit" class="btn-primary">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const STORAGE_KEY = 'atlas_world_v1';
+const PALETTE = ['#c9a24c','#4f9c8c','#b5524a','#5e7ce2','#9b6bc7','#e0915a','#3fa7d6','#7a8b99'];
+
+let state = { nations: [], cities: [] };
+let editingNationId = null;
+let editingCityId = null;
+let cityDraft = null;
+let pickingForCity = false;
+let map, markersLayer;
+
+/* ---------- storage ---------- */
+function load(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw) state = JSON.parse(raw);
+  }catch(e){ console.error('Error al leer datos guardados', e); }
+  if(!Array.isArray(state.nations)) state.nations = [];
+  if(!Array.isArray(state.cities)) state.cities = [];
+}
+function save(){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,8); }
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+}
+
+/* ---------- meters ---------- */
+function meterTicks(value, kind){
+  let html = '';
+  for(let i=1;i<=10;i++) html += `<span class="${i<=value ? 'filled '+kind : ''}"></span>`;
+  return html;
+}
+
+/* ---------- rendering: nations ---------- */
+function renderNations(){
+  const list = document.getElementById('listNations');
+  const empty = document.getElementById('emptyNations');
+  document.getElementById('countNations').textContent = state.nations.length;
+  if(state.nations.length === 0){ list.innerHTML=''; empty.hidden=false; return; }
+  empty.hidden = true;
+  list.innerHTML = state.nations.map(n=>{
+    const cityCount = state.cities.filter(c=>c.nationId===n.id).length;
+    return `<div class="row" data-id="${n.id}" data-type="nation">
+      <div class="row-dot" style="background:${n.color}"></div>
+      <div class="row-main">
+        <div class="row-title">${escapeHtml(n.name)}</div>
+        <div class="row-sub">${cityCount} ${cityCount===1?'ciudad':'ciudades'}</div>
+        <div class="row-meters">
+          <div class="mini-meter"><div class="meter">${meterTicks(n.dev,'teal')}</div><span class="mono">${n.dev}</span></div>
+          <div class="mini-meter"><div class="meter">${meterTicks(n.mil,'red')}</div><span class="mono">${n.mil}</span></div>
+        </div>
+      </div>
+      <button class="row-del" data-id="${n.id}" data-type="nation">✕</button>
+    </div>`;
+  }).join('');
+}
+
+/* ---------- rendering: cities ---------- */
+function renderCities(){
+  const list = document.getElementById('listCities');
+  const empty = document.getElementById('emptyCities');
+  document.getElementById('countCities').textContent = state.cities.length;
+  document.getElementById('emptyCitiesText').textContent = state.nations.length===0
+    ? 'Primero crea al menos una nación; luego podrás añadir sus ciudades.'
+    : 'Crea tu primera ciudad y asígnala a una nación.';
+  if(state.cities.length === 0){ list.innerHTML=''; empty.hidden=false; return; }
+  empty.hidden = true;
+  list.innerHTML = state.cities.map(c=>{
+    const nation = state.nations.find(n=>n.id===c.nationId);
+    const color = nation ? nation.color : '#666';
+    const nationName = nation ? nation.name : '(sin nación)';
+    return `<div class="row" data-id="${c.id}" data-type="city">
+      <div class="row-dot" style="background:${color}"></div>
+      <div class="row-main">
+        <div class="row-title">${escapeHtml(c.name)}</div>
+        <div class="row-sub">${escapeHtml(nationName)} · ${c.lat.toFixed(2)}, ${c.lng.toFixed(2)}</div>
+        <div class="row-meters">
+          <div class="mini-meter"><div class="meter">${meterTicks(c.dev,'teal')}</div><span class="mono">${c.dev}</span></div>
+          <div class="mini-meter"><div class="meter">${meterTicks(c.mil,'red')}</div><span class="mono">${c.mil}</span></div>
+        </div>
+      </div>
+      <button class="row-del" data-id="${c.id}" data-type="city">✕</button>
+    </div>`;
+  }).join('');
+}
+
+/* ---------- map ---------- */
+function initMap(){
+  map = L.map('map', { attributionControl:true, zoomControl:true }).setView([20,0], 2);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    subdomains:['a','b','c'], maxZoom:18,
+    attribution:'&copy; OpenStreetMap'
+  }).addTo(map);
+  markersLayer = L.layerGroup().addTo(map);
+  map.on('click', e=>{
+    if(!pickingForCity) return;
+    cityDraft.lat = +e.latlng.lat.toFixed(4);
+    cityDraft.lng = +e.latlng.lng.toFixed(4);
+    pickingForCity = false;
+    document.getElementById('pickBanner').hidden = true;
+    reopenCityFormFromDraft();
+  });
+}
+function renderMapMarkers(){
+  if(!markersLayer) return;
+  markersLayer.clearLayers();
+  state.cities.forEach(c=>{
+    const nation = state.nations.find(n=>n.id===c.nationId);
+    const color = nation ? nation.color : '#999';
+    const marker = L.circleMarker([c.lat, c.lng], {
+      radius:8, color:'#0e1720', weight:2, fillColor:color, fillOpacity:0.9
+    });
+    marker.bindPopup(`<div class="popup"><strong>${escapeHtml(c.name)}</strong><br>
+      <span>${nation ? escapeHtml(nation.name) : 'Sin nación'}</span><br>
+      <span class="mono">Desarrollo ${c.dev}/10 · Militar ${c.mil}/10</span></div>`);
+    marker.addTo(markersLayer);
+  });
+}
+
+function renderAll(){ renderNations(); renderCities(); renderMapMarkers(); }
+
+/* ---------- tabs ---------- */
+function goToTab(name){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===name));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active', p.id==='panel-'+name));
+  document.getElementById('fabAdd').style.display = (name==='map') ? 'none' : 'flex';
+  if(name==='map'){ setTimeout(()=>{ map.invalidateSize(); }, 220); }
+}
+document.querySelectorAll('.tab').forEach(b=> b.addEventListener('click', ()=>goToTab(b.dataset.tab)));
+
+/* ---------- overlays ---------- */
+function showOverlay(el){ el.classList.add('open'); }
+function hideOverlay(el){ el.classList.remove('open'); }
+document.querySelectorAll('.sheet-overlay').forEach(ov=>{
+  ov.addEventListener('click', e=>{ if(e.target===ov) hideOverlay(ov); });
+});
+
+/* ---------- swatches ---------- */
+function renderSwatches(){
+  document.getElementById('nationSwatches').innerHTML = PALETTE.map(c=>
+    `<button type="button" class="swatch" style="background:${c}" data-color="${c}"></button>`).join('');
+}
+document.getElementById('nationSwatches').addEventListener('click', e=>{
+  const sw = e.target.closest('.swatch');
+  if(sw) document.getElementById('nationColor').value = sw.dataset.color;
+});
+function randomPaletteColor(){
+  const used = state.nations.map(n=>n.color);
+  const avail = PALETTE.filter(c=>!used.includes(c));
+  const pool = avail.length ? avail : PALETTE;
+  return pool[Math.floor(Math.random()*pool.length)];
+}
+
+/* ---------- nation form ---------- */
+function updateNationMeters(){
+  const dev = +document.getElementById('nationDev').value;
+  const mil = +document.getElementById('nationMil').value;
+  document.getElementById('nationDevVal').textContent = dev;
+  document.getElementById('nationMilVal').textContent = mil;
+  document.getElementById('nationDevMeter').innerHTML = meterTicks(dev,'teal');
+  document.getElementById('nationMilMeter').innerHTML = meterTicks(mil,'red');
+}
+document.getElementById('nationDev').addEventListener('input', updateNationMeters);
+document.getElementById('nationMil').addEventListener('input', updateNationMeters);
+
+function openNationForm(id){
+  editingNationId = id || null;
+  const title = document.getElementById('nationFormTitle');
+  const delBtn = document.getElementById('btnDeleteNation');
+  if(id){
+    const n = state.nations.find(x=>x.id===id);
+    title.textContent = 'Editar nación';
+    document.getElementById('nationName').value = n.name;
+    document.getElementById('nationColor').value = n.color;
+    document.getElementById('nationDev').value = n.dev;
+    document.getElementById('nationMil').value = n.mil;
+    delBtn.hidden = false;
+  } else {
+    title.textContent = 'Nueva nación';
+    document.getElementById('nationName').value = '';
+    document.getElementById('nationColor').value = randomPaletteColor();
+    document.getElementById('nationDev').value = 5;
+    document.getElementById('nationMil').value = 5;
+    delBtn.hidden = true;
+  }
+  updateNationMeters();
+  showOverlay(document.getElementById('overlayNation'));
+  setTimeout(()=>document.getElementById('nationName').focus(), 260);
+}
+document.getElementById('formNation').addEventListener('submit', e=>{
+  e.preventDefault();
+  const name = document.getElementById('nationName').value.trim();
+  if(!name) return;
+  const color = document.getElementById('nationColor').value;
+  const dev = +document.getElementById('nationDev').value;
+  const mil = +document.getElementById('nationMil').value;
+  if(editingNationId){
+    Object.assign(state.nations.find(x=>x.id===editingNationId), {name,color,dev,mil});
+  } else {
+    state.nations.push({id:uid(), name, color, dev, mil});
+  }
+  save(); renderAll();
+  hideOverlay(document.getElementById('overlayNation'));
+});
+document.getElementById('btnCancelNation').addEventListener('click', ()=>hideOverlay(document.getElementById('overlayNation')));
+document.getElementById('btnDeleteNation').addEventListener('click', ()=>{
+  if(editingNationId && deleteNation(editingNationId)) hideOverlay(document.getElementById('overlayNation'));
+});
+
+function deleteNation(id){
+  const cityCount = state.cities.filter(c=>c.nationId===id).length;
+  const msg = cityCount>0
+    ? `Esta nación tiene ${cityCount} ${cityCount===1?'ciudad asociada':'ciudades asociadas'}. Se eliminarán también. ¿Continuar?`
+    : '¿Eliminar esta nación?';
+  if(!confirm(msg)) return false;
+  state.nations = state.nations.filter(n=>n.id!==id);
+  state.cities = state.cities.filter(c=>c.nationId!==id);
+  save(); renderAll();
+  return true;
+}
+
+/* ---------- city form ---------- */
+function updateCityMeters(){
+  const dev = +document.getElementById('cityDev').value;
+  const mil = +document.getElementById('cityMil').value;
+  document.getElementById('cityDevVal').textContent = dev;
+  document.getElementById('cityMilVal').textContent = mil;
+  document.getElementById('cityDevMeter').innerHTML = meterTicks(dev,'teal');
+  document.getElementById('cityMilMeter').innerHTML = meterTicks(mil,'red');
+}
+document.getElementById('cityDev').addEventListener('input', updateCityMeters);
+document.getElementById('cityMil').addEventListener('input', updateCityMeters);
+
+function populateNationSelect(selectedId){
+  const sel = document.getElementById('cityNation');
+  sel.innerHTML = state.nations.map(n=>`<option value="${n.id}">${escapeHtml(n.name)}</option>`).join('');
+  if(selectedId) sel.value = selectedId;
+}
+
+function openCityForm(id){
+  if(state.nations.length === 0){
+    alert('Primero crea una nación para poder añadir ciudades.');
+    goToTab('nations');
+    document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab==='nations'));
+    return;
+  }
+  editingCityId = id || null;
+  const title = document.getElementById('cityFormTitle');
+  const delBtn = document.getElementById('btnDeleteCity');
+  populateNationSelect();
+  if(id){
+    const c = state.cities.find(x=>x.id===id);
+    title.textContent = 'Editar ciudad';
+    document.getElementById('cityName').value = c.name;
+    populateNationSelect(c.nationId);
+    document.getElementById('cityLat').value = c.lat;
+    document.getElementById('cityLng').value = c.lng;
+    document.getElementById('cityDev').value = c.dev;
+    document.getElementById('cityMil').value = c.mil;
+    delBtn.hidden = false;
+  } else {
+    title.textContent = 'Nueva ciudad';
+    document.getElementById('cityName').value = '';
+    document.getElementById('cityLat').value = '';
+    document.getElementById('cityLng').value = '';
+    document.getElementById('cityDev').value = 5;
+    document.getElementById('cityMil').value = 5;
+    delBtn.hidden = true;
+  }
+  updateCityMeters();
+  showOverlay(document.getElementById('overlayCity'));
+  setTimeout(()=>document.getElementById('cityName').focus(), 260);
+}
+document.getElementById('formCity').addEventListener('submit', e=>{
+  e.preventDefault();
+  const name = document.getElementById('cityName').value.trim();
+  const nationId = document.getElementById('cityNation').value;
+  const lat = parseFloat(document.getElementById('cityLat').value);
+  const lng = parseFloat(document.getElementById('cityLng').value);
+  const dev = +document.getElementById('cityDev').value;
+  const mil = +document.getElementById('cityMil').value;
+  if(!name || !nationId || isNaN(lat) || isNaN(lng)){
+    alert('Completa nombre, nación y coordenadas (puedes elegirlas en el mapa).');
+    return;
+  }
+  if(lat<-90 || lat>90 || lng<-180 || lng>180){
+    alert('Coordenadas fuera de rango. Latitud: -90 a 90 · Longitud: -180 a 180.');
+    return;
+  }
+  if(editingCityId){
+    Object.assign(state.cities.find(x=>x.id===editingCityId), {name,nationId,lat,lng,dev,mil});
+  } else {
+    state.cities.push({id:uid(), name, nationId, lat, lng, dev, mil});
+  }
+  save(); renderAll();
+  hideOverlay(document.getElementById('overlayCity'));
+});
+document.getElementById('btnCancelCity').addEventListener('click', ()=>hideOverlay(document.getElementById('overlayCity')));
+document.getElementById('btnDeleteCity').addEventListener('click', ()=>{
+  if(editingCityId && deleteCity(editingCityId)) hideOverlay(document.getElementById('overlayCity'));
+});
+function deleteCity(id){
+  if(!confirm('¿Eliminar esta ciudad?')) return false;
+  state.cities = state.cities.filter(c=>c.id!==id);
+  save(); renderAll();
+  return true;
+}
+
+/* ---------- pick on map ---------- */
+document.getElementById('btnPickOnMap').addEventListener('click', ()=>{
+  cityDraft = {
+    name: document.getElementById('cityName').value,
+    nationId: document.getElementById('cityNation').value,
+    lat: document.getElementById('cityLat').value ? +document.getElementById('cityLat').value : null,
+    lng: document.getElementById('cityLng').value ? +document.getElementById('cityLng').value : null,
+    dev: +document.getElementById('cityDev').value,
+    mil: +document.getElementById('cityMil').value,
+    editingId: editingCityId
+  };
+  hideOverlay(document.getElementById('overlayCity'));
+  pickingForCity = true;
+  goToTab('map');
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab==='map'));
+  document.getElementById('pickBannerText').textContent =
+    `Toca el mapa para fijar la ubicación de "${cityDraft.name || 'la ciudad'}"`;
+  document.getElementById('pickBanner').hidden = false;
+});
+document.getElementById('btnCancelPick').addEventListener('click', ()=>{
+  pickingForCity = false;
+  document.getElementById('pickBanner').hidden = true;
+  reopenCityFormFromDraft();
+});
+function reopenCityFormFromDraft(){
+  const d = cityDraft;
+  editingCityId = d.editingId;
+  populateNationSelect(d.nationId);
+  document.getElementById('cityFormTitle').textContent = d.editingId ? 'Editar ciudad' : 'Nueva ciudad';
+  document.getElementById('cityName').value = d.name || '';
+  document.getElementById('cityLat').value = d.lat!=null ? d.lat : '';
+  document.getElementById('cityLng').value = d.lng!=null ? d.lng : '';
+  document.getElementById('cityDev').value = d.dev || 5;
+  document.getElementById('cityMil').value = d.mil || 5;
+  document.getElementById('btnDeleteCity').hidden = !d.editingId;
+  updateCityMeters();
+  showOverlay(document.getElementById('overlayCity'));
+  cityDraft = null;
+}
+
+/* ---------- row click delegation ---------- */
+document.getElementById('listNations').addEventListener('click', handleRowClick);
+document.getElementById('listCities').addEventListener('click', handleRowClick);
+function handleRowClick(e){
+  const del = e.target.closest('.row-del');
+  if(del){
+    e.stopPropagation();
+    if(del.dataset.type==='nation') deleteNation(del.dataset.id);
+    else deleteCity(del.dataset.id);
+    return;
+  }
+  const row = e.target.closest('.row');
+  if(row){
+    if(row.dataset.type==='nation') openNationForm(row.dataset.id);
+    else openCityForm(row.dataset.id);
+  }
+}
+
+/* ---------- fab ---------- */
+document.getElementById('fabAdd').addEventListener('click', ()=>{
+  const active = document.querySelector('.tab.active').dataset.tab;
+  if(active==='nations') openNationForm(null);
+  else if(active==='cities') openCityForm(null);
+});
+
+/* ---------- export / import ---------- */
+document.getElementById('btnExport').addEventListener('click', ()=>{
+  const blob = new Blob([JSON.stringify(state, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `atlas-datos-${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+document.getElementById('btnImport').addEventListener('click', ()=>document.getElementById('fileImport').click());
+document.getElementById('fileImport').addEventListener('change', e=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ()=>{
+    try{
+      const parsed = JSON.parse(reader.result);
+      if(!Array.isArray(parsed.nations) || !Array.isArray(parsed.cities)) throw new Error('formato inválido');
+      if(!confirm('Esto reemplazará todos los datos actuales por los del archivo importado. ¿Continuar?')) return;
+      state = parsed;
+      save(); renderAll();
+      alert('Datos importados correctamente.');
+    }catch(err){
+      alert('No se ha podido leer el archivo. Asegúrate de que es un export válido de Atlas.');
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+});
+
+/* ---------- init ---------- */
+load();
+renderSwatches();
+initMap();
+renderAll();
+</script>
+</body>
+</html>
